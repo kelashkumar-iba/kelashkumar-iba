@@ -2,7 +2,7 @@
   <img src="https://github.com/kelashkumar-iba/kelashkumar-iba/blob/main/github_cover.png" alt="Github Cover Page">
 </div>
 <h1 align="center">Hi 👋, I'm Kelash Kumar</h1>
-<h3 align="center">Data Science Aspirant</h3>
+<h3 align="center">Data Engineering Aspirant</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=kelashkumar-iba&label=Profile%20views&color=0e75b6&style=flat" alt="kelashkumar-iba" /> </p>
 
