@@ -1,8 +1,8 @@
 <div align = "center">
-  <img src="https://github.com/kelashkumar-iba/kelashkumar-iba/blob/main/github_cover.png" alt="Github Cover Page">
+  <img src="https://github.com/kelashkumar-iba/kelashkumar-iba/blob/main/githubcover.png" alt="Github Cover Page">
 </div>
-<h1 align="center">Hi 👋, I'm Kelash Kumar</h1>
-<h3 align="center">Data Engineering Aspirant</h3>
+<h1 align="center">Hi 👋, I'm Kelash</h1>
+<h3 align="center">Data Engineering Aspirant | Building Tomorrow's Data Infrastructure</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=kelashkumar-iba&label=Profile%20views&color=0e75b6&style=flat" alt="kelashkumar-iba" /> </p>
 
