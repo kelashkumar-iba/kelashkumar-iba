@@ -12,7 +12,7 @@
 
 - 💬 Ask me about **Python, Data Analysis, SQL**
 
-- 📫 How to reach me **kelash.iba22@gmail.com.**
+- 📫 How to reach me **kelash.iba22@gmail.com**
 
 - ⚡ Fun fact **I’ve written over 10,000 lines of code in R and Python combined.**
 
