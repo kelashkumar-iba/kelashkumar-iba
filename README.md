@@ -10,7 +10,7 @@
 
 - 🌱 I’m currently learning **Data Engineering**
 
-- 💬 Ask me about **Python, Data Analysis, SQL**
+- 💬 Ask me about **Python, Data Analysis, SQL.**
 
 - 📫 How to reach me **kelash.iba22@gmail.com**
 
