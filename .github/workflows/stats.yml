@@ -2,13 +2,13 @@ name: Generate GitHub Stats
 
 on:
   schedule:
-    - cron: "0 */6 * * *"   # runs every 6 hours
-  workflow_dispatch:          # allow manual trigger
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
   push:
     branches: [main]
 
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -17,35 +17,64 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # ── Stats Card ──────────────────────────────────────────────
-      - name: Download Stats Card
-        run: |
-          curl -s "https://github-readme-stats.vercel.app/api?username=kelashkumar-iba&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=38BDF8&icon_color=38BDF8&text_color=CBD5E1&count_private=true&include_all_commits=true&cache_seconds=1800" \
-            -o assets/stats.svg || echo "Stats fetch failed"
+      - name: Create assets dir
+        run: mkdir -p assets
 
-      # ── Top Languages Card ───────────────────────────────────────
-      - name: Download Top Languages Card
+      # ── Uses YOUR OWN GitHub token → no rate limits ──────────────
+      - name: Fetch Stats Card
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          curl -s "https://github-readme-stats.vercel.app/api/top-langs?username=kelashkumar-iba&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=38BDF8&text_color=CBD5E1&langs_count=6&cache_seconds=1800" \
-            -o assets/top-langs.svg || echo "Langs fetch failed"
+          # Call the API directly using your personal token — bypasses public rate limits
+          curl -fsSL \
+            -H "Authorization: token $GH_TOKEN" \
+            "https://github-readme-stats.vercel.app/api?username=kelashkumar-iba&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=38BDF8&icon_color=38BDF8&text_color=CBD5E1&count_private=true&include_all_commits=true" \
+            -o assets/stats.svg \
+            && grep -q "<svg" assets/stats.svg && echo "✅ stats.svg OK" \
+            || { echo "❌ stats.svg invalid — trying fallback"; \
+                 curl -fsSL "https://github-stats-alpha.vercel.app/api?username=kelashkumar-iba&cc=0D1117&tc=CBD5E1&ic=38BDF8&bc=38BDF8" -o assets/stats.svg || true; }
 
-      # ── Streak Stats ─────────────────────────────────────────────
-      - name: Download Streak Stats
+      - name: Fetch Top Languages Card
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          curl -s "https://streak-stats.demolab.com?user=kelashkumar-iba&theme=tokyonight&hide_border=true&background=0D1117&stroke=38BDF8&ring=38BDF8&fire=FB923C&currStreakLabel=38BDF8&sideLabels=CBD5E1&dates=64748B&cache_seconds=1800" \
-            -o assets/streak.svg || echo "Streak fetch failed"
+          curl -fsSL \
+            -H "Authorization: token $GH_TOKEN" \
+            "https://github-readme-stats.vercel.app/api/top-langs?username=kelashkumar-iba&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=38BDF8&text_color=CBD5E1&langs_count=6" \
+            -o assets/top-langs.svg \
+            && grep -q "<svg" assets/top-langs.svg && echo "✅ top-langs.svg OK" \
+            || echo "❌ top-langs.svg invalid"
 
-      # ── Activity Graph ───────────────────────────────────────────
-      - name: Download Activity Graph
+      - name: Fetch Streak Stats
         run: |
-          curl -s "https://github-readme-activity-graph.vercel.app/graph?username=kelashkumar-iba&bg_color=0D1117&color=38BDF8&line=38BDF8&point=FB923C&area=true&area_color=38BDF820&hide_border=true&custom_title=Contribution+Activity" \
-            -o assets/activity.svg || echo "Graph fetch failed"
+          curl -fsSL \
+            "https://streak-stats.demolab.com?user=kelashkumar-iba&theme=tokyonight&hide_border=true&background=0D1117&stroke=38BDF8&ring=38BDF8&fire=FB923C&currStreakLabel=38BDF8&sideLabels=CBD5E1&dates=64748B" \
+            -o assets/streak.svg \
+            && grep -q "<svg" assets/streak.svg && echo "✅ streak.svg OK" \
+            || echo "❌ streak.svg invalid"
 
-      # ── Commit if changed ────────────────────────────────────────
-      - name: Commit updated SVGs
+      - name: Fetch Activity Graph
+        run: |
+          curl -fsSL \
+            "https://github-readme-activity-graph.vercel.app/graph?username=kelashkumar-iba&bg_color=0D1117&color=38BDF8&line=38BDF8&point=FB923C&area=true&hide_border=true&custom_title=Contribution+Activity" \
+            -o assets/activity.svg \
+            && grep -q "<svg" assets/activity.svg && echo "✅ activity.svg OK" \
+            || echo "❌ activity.svg invalid"
+
+      - name: Remove invalid SVGs (prevent broken images)
+        run: |
+          for f in assets/stats.svg assets/top-langs.svg assets/streak.svg assets/activity.svg; do
+            if [ -f "$f" ] && ! grep -q "<svg" "$f"; then
+              echo "Removing invalid file: $f"
+              rm "$f"
+            fi
+          done
+
+      - name: Commit changes
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add assets/
-          git diff --cached --quiet || git commit -m "chore: refresh stats SVGs [skip ci]"
-          git push
+          git diff --cached --quiet \
+            && echo "Nothing to commit" \
+            || (git commit -m "chore: refresh stats SVGs [skip ci]" && git push)
