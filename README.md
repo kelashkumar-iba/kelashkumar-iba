@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/kelashkumar-iba/kelashkumar-iba/blob/main/githubcover.png" width="100%" />
+  <img src="https://github.com/kelashkumar-iba/kelashkumar-iba/blob/main/newcover.png" width="100%" />
 </div>
 
 <br/>
