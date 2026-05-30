@@ -16,6 +16,7 @@
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/kelashkumar-iba)
 [![Email](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kelash.iba22@gmail.com)
 ![Views](https://komarev.com/ghpvc/?username=kelashkumar-iba&style=for-the-badge&color=0D1117&label=VIEWS&labelColor=38BDF8)
+[![Rankistan](https://img.shields.io/endpoint?url=https%3A%2F%2Frankistan-summary-api.academics-ali.workers.dev%2Fapi%2Fbadge%2Fkelashkumar-iba&style=for-the-badge)](https://rankistan.dev)
 
 </div>
 
