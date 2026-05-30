@@ -1,0 +1,51 @@
+name: Generate GitHub Stats
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # runs every 6 hours
+  workflow_dispatch:          # allow manual trigger
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ── Stats Card ──────────────────────────────────────────────
+      - name: Download Stats Card
+        run: |
+          curl -s "https://github-readme-stats.vercel.app/api?username=kelashkumar-iba&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=38BDF8&icon_color=38BDF8&text_color=CBD5E1&count_private=true&include_all_commits=true&cache_seconds=1800" \
+            -o assets/stats.svg || echo "Stats fetch failed"
+
+      # ── Top Languages Card ───────────────────────────────────────
+      - name: Download Top Languages Card
+        run: |
+          curl -s "https://github-readme-stats.vercel.app/api/top-langs?username=kelashkumar-iba&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=38BDF8&text_color=CBD5E1&langs_count=6&cache_seconds=1800" \
+            -o assets/top-langs.svg || echo "Langs fetch failed"
+
+      # ── Streak Stats ─────────────────────────────────────────────
+      - name: Download Streak Stats
+        run: |
+          curl -s "https://streak-stats.demolab.com?user=kelashkumar-iba&theme=tokyonight&hide_border=true&background=0D1117&stroke=38BDF8&ring=38BDF8&fire=FB923C&currStreakLabel=38BDF8&sideLabels=CBD5E1&dates=64748B&cache_seconds=1800" \
+            -o assets/streak.svg || echo "Streak fetch failed"
+
+      # ── Activity Graph ───────────────────────────────────────────
+      - name: Download Activity Graph
+        run: |
+          curl -s "https://github-readme-activity-graph.vercel.app/graph?username=kelashkumar-iba&bg_color=0D1117&color=38BDF8&line=38BDF8&point=FB923C&area=true&area_color=38BDF820&hide_border=true&custom_title=Contribution+Activity" \
+            -o assets/activity.svg || echo "Graph fetch failed"
+
+      # ── Commit if changed ────────────────────────────────────────
+      - name: Commit updated SVGs
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/
+          git diff --cached --quiet || git commit -m "chore: refresh stats SVGs [skip ci]"
+          git push
