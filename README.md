@@ -5,191 +5,279 @@
 <br/>
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=22&duration=2500&pause=800&color=38BDF8&center=true&vCenter=true&width=750&lines=Hi+%F0%9F%91%8B+I'm+Kelash+Kumar;Data+Engineer+%7C+Pipeline+Builder;Kafka+%7C+Debezium+%7C+dbt+%7C+DuckDB+%7C+OCI;~90s+push-to-live+on+real+ARM+infrastructure;Open+to+Internships+%26+Junior+DE+Roles" alt="typing" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=720&lines=Data+Engineer+%7C+Pipeline+Builder;Kafka+%7C+Debezium+%7C+dbt+%7C+Airflow+%7C+DuckDB;Production+pipelines+at+%240%2Fmonth+infra+cost;90s+push-to-live+%7C+OCI+ARM+%7C+Docker;Open+to+Internships+%26+Junior+DE+Roles" alt="typing" />
 </div>
 
 <br/>
 
 <div align="center">
 
-[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-kelash.me-0F172A?style=for-the-badge&labelColor=38BDF8&color=0F172A)](https://kelash.me)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/kelashkumar-iba)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kelash.iba22@gmail.com)
-[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/kelashkumar)
-![Views](https://komarev.com/ghpvc/?username=kelashkumar-iba&style=for-the-badge&color=38BDF8&label=PROFILE+VIEWS)
+[![Portfolio](https://img.shields.io/badge/kelash.me-38BDF8?style=for-the-badge&logo=googlechrome&logoColor=0D1117&labelColor=38BDF8)](https://kelash.me)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/kelashkumar-iba)
+[![Email](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kelash.iba22@gmail.com)
+![Views](https://komarev.com/ghpvc/?username=kelashkumar-iba&style=for-the-badge&color=0D1117&label=VIEWS&labelColor=38BDF8)
 
 </div>
 
 ---
 
-## `$ whoami`
+<br/>
 
-```yaml
-name        : Kelash Kumar
-role        : Data Engineer  ·  Fresh Graduate (BS CS, May 2026)
-university  : Sukkur IBA University — CGPA 3.1  ·  NSCT 92.2nd percentile
-location    : Mithi, Tharparkar, Pakistan 🇵🇰
-portfolio   : https://kelash.me
-open_to     : [Internships, Junior DE Roles, Remote]
-focus       : Streaming · CDC · Lakehouse · CI/CD
-infra       : OCI ARM VM  ·  4 OCPU / 24 GB  ·  Ubuntu 22.04
+```python
+kelash = {
+    "role"     : "Data Engineer",
+    "school"   : "BS CS — Sukkur IBA University (May 2026)",
+    "stack"    : ["Kafka/Redpanda", "dbt", "Airflow", "Debezium", "DuckDB", "Docker"],
+    "infra"    : "OCI ARM VM · 4 OCPU / 24 GB · Ubuntu 22.04 · $0/month",
+    "projects" : "3 end-to-end pipelines · streaming · CDC · lakehouse",
+    "live_at"  : "https://streaming-pipeline.kelash.me",
+    "open_to"  : ["Internships", "Junior DE Roles", "Remote"],
+}
 ```
+
+<br/>
 
 ---
 
-## `$ ls ./projects`
+## ⚙️ Projects
 
+<div align="center">
 <table>
 <tr>
-<td width="33%" valign="top">
 
-### ⚡ Real-Time Crypto Pipeline
+<td align="center" width="330" valign="top">
 
-Kafka producers ingest live crypto market data. Consumers write to PostgreSQL. Metabase serves live dashboards. Deployed on OCI ARM with Caddy + Let's Encrypt HTTPS. 4-job GitHub Actions CI/CD pipeline.
+<br/>
 
-```
-latency : ~90s push-to-live
-infra   : OCI ARM · Docker · Caddy
-status  : 🟢 LIVE
-```
+**⚡ &nbsp; Real-Time Crypto Pipeline**
 
-[![LIVE DEMO](https://img.shields.io/badge/LIVE-streaming--pipeline.kelash.me-22C55E?style=flat-square&logo=googlechrome&logoColor=white)](https://streaming-pipeline.kelash.me)
-[![Repo](https://img.shields.io/badge/GitHub-View-0D1117?style=flat-square&logo=github)](https://github.com/kelashkumar-iba)
+---
 
-![Kafka](https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
+<img src="https://img.shields.io/badge/🟢_LIVE-OCI_ARM_·_$0%2Fmonth-22C55E?style=flat-square"/>
+
+<br/><br/>
+
+9-service Docker Compose stack.<br/>
+Redpanda → Python consumer → PostgreSQL.<br/>
+Airflow orchestrates 3-layer dbt transforms.<br/>
+4-job CI/CD · safety-gated SSH deploy.
+
+<br/>
+
+| Metric | Value |
+|:---|:---:|
+| Updates/day | ~14,400 |
+| E2E freshness | < 5 min |
+| Push-to-live | ~90s |
+| Test suite | 8 pytest |
+
+<br/>
+
+[![Live](https://img.shields.io/badge/LIVE-streaming--pipeline.kelash.me-22C55E?style=flat-square&logo=googlechrome&logoColor=white)](https://streaming-pipeline.kelash.me)
+[![Repo](https://img.shields.io/badge/GitHub-View-0D1117?style=flat-square&logo=github&logoColor=white)](https://github.com/kelashkumar-iba)
+
+<br/>
+
+![Redpanda](https://img.shields.io/badge/Redpanda-FF3E00?style=flat-square)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white)
+![Airflow](https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Metabase](https://img.shields.io/badge/Metabase-509EE3?style=flat-square)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![OCI](https://img.shields.io/badge/OCI-F80000?style=flat-square&logo=oracle&logoColor=white)
+
+<br/>
 
 </td>
-<td width="33%" valign="top">
 
-### 🔄 CDC Pipeline
+<td align="center" width="330" valign="top">
 
-PostgreSQL Write-Ahead Logging captured by Debezium and streamed via Kafka. dbt materializes SCD Type 2 tables — full insert/update/delete history with zero data loss.
+<br/>
 
-```
-pattern : Debezium → Kafka → dbt
-scd     : Type 2 (full lineage)
-status  : 🟡 Local · Deploy pending
-```
+**🔄 &nbsp; CDC Pipeline**
 
-[![Repo](https://img.shields.io/badge/GitHub-View-0D1117?style=flat-square&logo=github)](https://github.com/kelashkumar-iba)
+---
+
+<img src="https://img.shields.io/badge/⚙️_LOCAL-Deploy_Pending-FB923C?style=flat-square"/>
+
+<br/><br/>
+
+PostgreSQL WAL → Debezium → Redpanda.<br/>
+Idempotent Python consumer · PK upserts.<br/>
+dbt SCD Type 2 for full change history.<br/>
+Dead-letter queue for malformed events.
+
+<br/>
+
+| Metric | Value |
+|:---|:---:|
+| Replication lag | < 10s |
+| Previous lag | ~60 min |
+| Delivery | at-least-once |
+| Duplicates | eliminated |
+
+<br/>
+
+[![Repo](https://img.shields.io/badge/GitHub-View-0D1117?style=flat-square&logo=github&logoColor=white)](https://github.com/kelashkumar-iba)
+
+<br/><br/>
 
 ![Debezium](https://img.shields.io/badge/Debezium-FF1F1F?style=flat-square)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL_WAL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Redpanda](https://img.shields.io/badge/Redpanda-FF3E00?style=flat-square)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white)
-![Kafka](https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
+![Airflow](https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+
+<br/>
 
 </td>
-<td width="33%" valign="top">
 
-### 🏛️ Medallion Lakehouse
+<td align="center" width="330" valign="top">
 
-Three-layer architecture (Bronze → Silver → Gold) on MinIO object storage. DuckDB powers analytical queries. Great Expectations enforces schema contracts at every layer boundary automatically.
+<br/>
 
-```
-layers  : Bronze → Silver → Gold
-storage : MinIO (S3-compatible)
-quality : Great Expectations gates
-```
+**🏛️ &nbsp; Medallion Lakehouse**
 
-[![Repo](https://img.shields.io/badge/GitHub-View-0D1117?style=flat-square&logo=github)](https://github.com/kelashkumar-iba)
+---
+
+<img src="https://img.shields.io/badge/⚙️_LOCAL-Deploy_Pending-FB923C?style=flat-square"/>
+
+<br/><br/>
+
+Bronze → Silver → Gold on MinIO + Parquet.<br/>
+DuckDB as zero-cost SQL compute engine.<br/>
+31 Great Expectations checks per layer.<br/>
+Partition-aware DAGs for safe backfills.
+
+<br/>
+
+| Metric | Value |
+|:---|:---:|
+| GX checks | 31 total |
+| Bronze | 11 checks |
+| Silver | 20 checks |
+| Infra cost | $0/month |
+
+<br/>
+
+[![Repo](https://img.shields.io/badge/GitHub-View-0D1117?style=flat-square&logo=github&logoColor=white)](https://github.com/kelashkumar-iba)
+
+<br/><br/>
 
 ![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=flat-square&logo=minio&logoColor=white)
 ![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black)
-![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Parquet](https://img.shields.io/badge/Parquet-50ABF1?style=flat-square)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![Great Expectations](https://img.shields.io/badge/Great_Expectations-FF6B35?style=flat-square)
+![Airflow](https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+
+<br/>
 
 </td>
+
 </tr>
 </table>
+</div>
+
+<br/>
 
 ---
 
-## `$ cat ./stack.yml`
+## 🛠️ Stack
 
-**Data Engineering**
+<div align="center">
 
-![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
+**⬡ &nbsp; Data Engineering**
+
+![Airflow](https://img.shields.io/badge/Apache_Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white)
+![Kafka](https://img.shields.io/badge/Kafka_/_Redpanda-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
 ![dbt](https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white)
-![Apache Airflow](https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white)
 ![Debezium](https://img.shields.io/badge/Debezium-FF1F1F?style=for-the-badge)
-![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=for-the-badge&logo=minio&logoColor=white)
-![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black)
 ![Great Expectations](https://img.shields.io/badge/Great_Expectations-FF6B35?style=for-the-badge)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![ETL/ELT](https://img.shields.io/badge/ETL_%2F_ELT-0F172A?style=for-the-badge&labelColor=38BDF8&color=0F172A)
+![CDC](https://img.shields.io/badge/CDC-0F172A?style=for-the-badge&labelColor=38BDF8&color=0F172A)
+![SCD Type 2](https://img.shields.io/badge/SCD_Type_2-0F172A?style=for-the-badge&labelColor=38BDF8&color=0F172A)
+![Data Modeling](https://img.shields.io/badge/Data_Modeling-0F172A?style=for-the-badge&labelColor=38BDF8&color=0F172A)
+![Medallion](https://img.shields.io/badge/Medallion_Architecture-0F172A?style=for-the-badge&labelColor=38BDF8&color=0F172A)
+![Metabase](https://img.shields.io/badge/Metabase-509EE3?style=for-the-badge)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
 
-**Languages & Databases**
+<br/>
+
+**🗄️ &nbsp; Languages & Databases**
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
-![Scala](https://img.shields.io/badge/Scala-DC322F?style=for-the-badge&logo=scala&logoColor=white)
+![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black)
+![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=for-the-badge&logo=minio&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Parquet](https://img.shields.io/badge/Parquet-50ABF1?style=for-the-badge)
 
-**Infrastructure & DevOps**
+<br/>
+
+**⚙️ &nbsp; Infrastructure & DevOps**
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![Oracle Cloud](https://img.shields.io/badge/OCI_ARM_VM-F80000?style=for-the-badge&logo=oracle&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux_Ubuntu_22.04-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Caddy](https://img.shields.io/badge/Caddy_+_HTTPS-00ADD8?style=for-the-badge)
-![Datadog](https://img.shields.io/badge/Datadog-632CA6?style=for-the-badge&logo=datadog&logoColor=white)
+![OCI](https://img.shields.io/badge/Oracle_Cloud-F80000?style=for-the-badge&logo=oracle&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Caddy](https://img.shields.io/badge/Caddy-00ADD8?style=for-the-badge)
+![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+![pre-commit](https://img.shields.io/badge/pre--commit-FAB040?style=for-the-badge&logo=precommit&logoColor=black)
+![Makefile](https://img.shields.io/badge/Makefile-6D4C41?style=for-the-badge&logo=gnu&logoColor=white)
+![REST APIs](https://img.shields.io/badge/REST_APIs-0F172A?style=for-the-badge&labelColor=38BDF8&color=0F172A)
+![SSH](https://img.shields.io/badge/SSH-0F172A?style=for-the-badge&labelColor=38BDF8&color=0F172A)
+![iptables](https://img.shields.io/badge/iptables-0F172A?style=for-the-badge&labelColor=38BDF8&color=0F172A)
+
+</div>
 
 ---
 
-## `$ github --stats`
+## 📊 GitHub Stats
 
 <div align="center">
 
-<img src="assets/stats.svg" width="49%" alt="GitHub Stats" />
-<img src="assets/streak.svg" width="49%" alt="Streak Stats" />
+<img src="assets/stats.svg" width="49%" alt="GitHub Stats"/>
+<img src="assets/streak.svg" width="49%" alt="Streak Stats"/>
 
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="assets/top-langs.svg" width="40%" alt="Top Languages" />
+  <img src="assets/activity.svg" width="97%" alt="Contribution Activity"/>
 </div>
-
-<br/>
-
-<div align="center">
-  <img src="assets/activity.svg" width="97%" alt="Contribution Activity" />
-</div>
-
----
-
-## `$ git log --oneline`
-
-```
-2026  ██████████████████  BS CS — Sukkur IBA University (May 2026)
-2026  ████████████        Crypto Pipeline live on OCI ARM · kelash.me
-2026  ████████            CDC Pipeline — Debezium + WAL + dbt SCD Type 2
-2026  ██████              Medallion Lakehouse — MinIO + DuckDB + GX
-2026  ████████████████    Custom domain · CI/CD · Caddy HTTPS · Let's Encrypt
-2026  ██████████          92.2nd percentile — National Standardised Testing
-```
 
 ---
 
 <div align="center">
 
-**Not a tutorial project collector. Every pipeline runs on real infrastructure.**
+<br/>
 
-The Crypto Pipeline is live right now → **[streaming-pipeline.kelash.me](https://streaming-pipeline.kelash.me)**
+*Three end-to-end pipelines. Real infra. Real numbers. No fluff.*
+
+**[streaming-pipeline.kelash.me](https://streaming-pipeline.kelash.me) — live right now.**
 
 <br/>
 
-[![Portfolio](https://img.shields.io/badge/kelash.me-38BDF8?style=for-the-badge&logo=google-chrome&logoColor=0D1117)](https://kelash.me)
-&nbsp;
-[![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/kelashkumar-iba)
-&nbsp;
+[![Portfolio](https://img.shields.io/badge/kelash.me-38BDF8?style=for-the-badge&logo=googlechrome&logoColor=0D1117&labelColor=38BDF8)](https://kelash.me)
+&nbsp;&nbsp;
+[![LinkedIn](https://img.shields.io/badge/Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/kelashkumar-iba)
+&nbsp;&nbsp;
 [![Email](https://img.shields.io/badge/Email_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:kelash.iba22@gmail.com)
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,16&height=100&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0D1117,38BDF8&height=120&section=footer" width="100%"/>
 
 </div>
