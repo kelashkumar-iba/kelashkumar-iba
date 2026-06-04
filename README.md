@@ -265,7 +265,7 @@ Partition-aware DAGs for safe backfills.
 
 <br/>
 
-*Three end-to-end pipelines. Real infra. Real numbers. No fluff.*
+*Three end-to-end pipelines. Real infra. Real numbers. No fluff. *
 
 **[streaming-pipeline.kelash.me](https://streaming-pipeline.kelash.me) — live right now.**
 
