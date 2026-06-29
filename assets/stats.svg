@@ -1,232 +1,169 @@
+<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>
+        .leftdiv {
+            animation: fadeH 0.7s ease-in-out forwards;
+        }
 
-      <svg
-        width="467"
-        height="195"
-        viewBox="0 0 467 195"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        role="img"
-        aria-labelledby="descId"
-      >
-        <title id="titleId">Kelash Kumar's GitHub Stats, Rank: B-</title>
-        <desc id="descId">Total Stars Earned: 23, Total Commits  : 1279, Total PRs: 2, Total Issues: 2, Contributed to (last year): 1</desc>
-        <style>
-          .header {
-            font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
+        .text {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            fill: #CBD5E1;
+            font-size: 14px;
+        }
+
+        .singleitem {
+            opacity: 0;
+            animation: fade 0.3s ease-in-out forwards;
+        }
+
+        .followers {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            fill: #CBD5E1;
+            font-size: 12px;
+        }
+
+        .namepl {
+            font-family: Arial, Helvetica, sans-serif;
+            fill: #CBD5E1;
+            font-size: 17px;
+            font-weight: 600;
+            alignment-baseline: middle;
+            text-anchor: middle;
+        }
+
+        .icon {
             fill: #38BDF8;
-            animation: fadeInAnimation 0.8s ease-in-out forwards;
-          }
-          @supports(-moz-appearance: auto) {
-            /* Selector detects Firefox */
-            .header { font-size: 15.5px; }
-          }
-          
-    .stat {
-      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #CBD5E1;
-    }
-    @supports(-moz-appearance: auto) {
-      /* Selector detects Firefox */
-      .stat { font-size:12px; }
-    }
-    .stagger {
-      opacity: 0;
-      animation: fadeInAnimation 0.3s ease-in-out forwards;
-    }
-    .rank-text {
-      font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #CBD5E1;
-      animation: scaleInAnimation 0.3s ease-in-out forwards;
-    }
-    .rank-percentile-header {
-      font-size: 14px;
-    }
-    .rank-percentile-text {
-      font-size: 16px;
-    }
-    
-    .not_bold { font-weight: 400 }
-    .bold { font-weight: 700 }
-    .icon {
-      fill: #38BDF8;
-      display: block;
-    }
-
-    .rank-circle-rim {
-      stroke: #38BDF8;
-      fill: none;
-      stroke-width: 6;
-      opacity: 0.2;
-    }
-    .rank-circle {
-      stroke: #38BDF8;
-      stroke-dasharray: 250;
-      fill: none;
-      stroke-width: 6;
-      stroke-linecap: round;
-      opacity: 0.8;
-      transform-origin: -10px 8px;
-      transform: rotate(-90deg);
-      animation: rankAnimation 1s forwards ease-in-out;
-    }
-    
-    @keyframes rankAnimation {
-      from {
-        stroke-dashoffset: 251.32741228718345;
-      }
-      to {
-        stroke-dashoffset: 183.05873156295408;
-      }
-    }
-  
-  
-
-          
-      /* Animations */
-      @keyframes scaleInAnimation {
-        from {
-          transform: translate(-5px, 5px) scale(0);
+            display: block;
         }
-        to {
-          transform: translate(-5px, 5px) scale(1);
+
+
+        @keyframes fade {
+            from {
+                opacity: .5;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
-      }
-      @keyframes fadeInAnimation {
-        from {
-          opacity: 0;
+
+        @keyframes fadeH {
+            from {
+                opacity: 0;
+                transform: translate(-90px, 10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(10px, 10px);
+            }
         }
-        to {
-          opacity: 1;
-        }
-      }
-    
-          
-        </style>
+    </style>
+    <rect x="0.5" y="0.5" rx="4.5" height="99%" width="494" fill="#0D1117" stroke="#38BDF8" stroke-opacity="1" />
 
-        
+    <g transform="translate(0, 25)">
 
-        <rect
-          data-testid="card-bg"
-          x="0.5"
-          y="0.5"
-          rx="4.5"
-          height="99%"
-          stroke="#e4e2e2"
-          width="466"
-          fill="#0D1117"
-          stroke-opacity="0"
-        />
 
-        
-      <g
-        data-testid="card-title"
-        transform="translate(25, 35)"
-      >
-        <g transform="translate(0, 0)">
-      <text
-        x="0"
-        y="0"
-        class="header"
-        data-testid="header"
-      >Kelash Kumar's GitHub Stats</text>
-    </g>
-      </g>
-    
+        <g class="leftdiv">
 
-        <g
-          data-testid="main-card-body"
-          transform="translate(0, 55)"
-        >
-          
-    <g data-testid="rank-circle"
-          transform="translate(390.5, 47.5)">
-        <circle class="rank-circle-rim" cx="-10" cy="8" r="40" />
-        <circle class="rank-circle" cx="-10" cy="8" r="40" />
-        <g class="rank-text">
-          
-        <text x="-5" y="3" alignment-baseline="central" dominant-baseline="central" text-anchor="middle" data-testid="level-rank-icon">
-          B-
-        </text>
-      
+        <defs>
+        <pattern id="image" x="0%" y="0%" height="100%" width="100%" viewBox="0 0 512 512">
+            <image x="0%" y="0%" width="512" height="512"
+                xlink:href="data:image/png;base64,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">
+            </image>
+        </pattern>
+    </defs>
+    <circle cx="86" cy="44" r="40" stroke="#0D1117" stroke-width="3" fill="url(#image)" />
+        <text x="86" y="100" class="namepl">Kelash Kumar</text>
+        <svg x="35" y="111.8" class="icon" viewBox="0 0 16 16" version="1.1" width="14" height="14">
+            <path fill-rule="evenodd"
+                d="M5.5 3.5a2 2 0 100 4 2 2 0 000-4zM2 5.5a3.5 3.5 0 115.898 2.549 5.507 5.507 0 013.034 4.084.75.75 0 11-1.482.235 4.001 4.001 0 00-7.9 0 .75.75 0 01-1.482-.236A5.507 5.507 0 013.102 8.05 3.49 3.49 0 012 5.5zM11 4a.75.75 0 100 1.5 1.5 1.5 0 01.666 2.844.75.75 0 00-.416.672v.352a.75.75 0 00.574.73c1.2.289 2.162 1.2 2.522 2.372a.75.75 0 101.434-.44 5.01 5.01 0 00-2.56-3.012A3 3 0 0011 4z" />
+        </svg>
+
+        <text x="55" y="123" class="followers">Followers:</text>
+        <text x="114" y="124" style="font-weight: 700" class="followers">24</text>
+
         </g>
-      </g>
-    <svg x="0" y="0">
-      <g transform="translate(0, 0)">
-    <g class="stagger" style="animation-delay: 450ms" transform="translate(25, 0)">
-      
-    <svg data-testid="icon" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-      <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"/>
-    </svg>
-  
-      <text class="stat  bold" x="25" y="12.5">Total Stars Earned:</text>
-      <text
-        class="stat  bold"
-        x="219.01"
-        y="12.5"
-        data-testid="stars"
-      >23</text>
+
+        <svg>
+            <g transform="translate(230, 0)">
+                <g class="singleitem" style="animation-delay: 210ms" transform="translate(25, 0)">
+
+                    <svg class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                            d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75zm8.755 3a2.25 2.25 0 012.25-2.25H14.5v9h-3.757c-.71 0-1.4.201-1.992.572l.004-7.322zm-1.504 7.324l.004-5.073-.002-2.253A2.25 2.25 0 005.003 2.5H1.5v9h3.757a3.75 3.75 0 011.994.574z" />
+                    </svg>
+
+                    <text class="text" x="25" y="12.5">Total Repo:</text>
+                    <text class="text" style="font-weight: 700" x="150" y="12.5">14</text>
+                </g>
+            </g>
+
+            <g transform="translate(230, 25)">
+                <g class="singleitem" style="animation-delay: 350ms" transform="translate(25, 0)">
+
+                    <svg class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                            d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z" />
+                    </svg>
+
+                    <text class="text" x="25" y="12.5">Star's Count:</text>
+                    <text class="text" style="font-weight: 700" x="150" y="12.5">23</text>
+                </g>
+            </g>
+
+            <g transform="translate(230, 50)">
+                <g class="singleitem" style="animation-delay: 460ms" transform="translate(25, 0)">
+
+                    <svg class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                            d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z" />
+                    </svg>
+
+                    <text class="text" x="25" y="12.5">Fork's Count:</text>
+                    <text class="text" style="font-weight: 700" x="150" y="12.5">1</text>
+                </g>
+            </g>
+
+            <g transform="translate(230, 75)">
+                <g class="singleitem" style="animation-delay: 560ms" transform="translate(25, 0)">
+
+                    <svg class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                            d="M1.643 3.143L.427 1.927A.25.25 0 000 2.104V5.75c0 .138.112.25.25.25h3.646a.25.25 0 00.177-.427L2.715 4.215a6.5 6.5 0 11-1.18 4.458.75.75 0 10-1.493.154 8.001 8.001 0 101.6-5.684zM7.75 4a.75.75 0 01.75.75v2.992l2.028.812a.75.75 0 01-.557 1.392l-2.5-1A.75.75 0 017 8.25v-3.5A.75.75 0 017.75 4z" />
+                    </svg>
+
+                    <text class="text" x="25" y="12.5">Contributions:</text>
+                    <text class="text" style="font-weight: 700" x="150" y="12.5">975</text>
+                </g>
+            </g>
+
+
+            <g transform="translate(230, 100)">
+                <g class="singleitem" style="animation-delay: 660ms" transform="translate(25, 0)">
+
+                    <svg class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                            d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z" />
+                    </svg>
+
+                    <text class="text" x="25" y="12.5">Total Issues:</text>
+                    <text class="text" style="font-weight: 700" x="150" y="12.5">2</text>
+                </g>
+            </g>
+
+            <g transform="translate(230, 125)">
+                <g class="singleitem" style="animation-delay: 760ms" transform="translate(25, 0)">
+
+                    <svg class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
+                        <path fill-rule="evenodd"
+                            d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z" />
+                    </svg>
+
+                    <text class="text" x="25" y="12.5">Closed Issues:</text>
+                    <text class="text" style="font-weight: 700" x="150" y="12.5">2</text>
+                </g>
+            </g>
+
+        </svg>
     </g>
-  </g><g transform="translate(0, 25)">
-    <g class="stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
-      
-    <svg data-testid="icon" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-      <path fill-rule="evenodd" d="M1.643 3.143L.427 1.927A.25.25 0 000 2.104V5.75c0 .138.112.25.25.25h3.646a.25.25 0 00.177-.427L2.715 4.215a6.5 6.5 0 11-1.18 4.458.75.75 0 10-1.493.154 8.001 8.001 0 101.6-5.684zM7.75 4a.75.75 0 01.75.75v2.992l2.028.812a.75.75 0 01-.557 1.392l-2.5-1A.75.75 0 017 8.25v-3.5A.75.75 0 017.75 4z"/>
-    </svg>
-  
-      <text class="stat  bold" x="25" y="12.5">Total Commits:</text>
-      <text
-        class="stat  bold"
-        x="219.01"
-        y="12.5"
-        data-testid="commits"
-      >1.3k</text>
-    </g>
-  </g><g transform="translate(0, 50)">
-    <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
-      
-    <svg data-testid="icon" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-      <path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z"/>
-    </svg>
-  
-      <text class="stat  bold" x="25" y="12.5">Total PRs:</text>
-      <text
-        class="stat  bold"
-        x="219.01"
-        y="12.5"
-        data-testid="prs"
-      >2</text>
-    </g>
-  </g><g transform="translate(0, 75)">
-    <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
-      
-    <svg data-testid="icon" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-      <path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z"/>
-    </svg>
-  
-      <text class="stat  bold" x="25" y="12.5">Total Issues:</text>
-      <text
-        class="stat  bold"
-        x="219.01"
-        y="12.5"
-        data-testid="issues"
-      >2</text>
-    </g>
-  </g><g transform="translate(0, 100)">
-    <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
-      
-    <svg data-testid="icon" class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
-      <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"/>
-    </svg>
-  
-      <text class="stat  bold" x="25" y="12.5">Contributed to (last year):</text>
-      <text
-        class="stat  bold"
-        x="219.01"
-        y="12.5"
-        data-testid="contribs"
-      >1</text>
-    </g>
-  </g>
-    </svg>
-  
-        </g>
-      </svg>
-    
+</svg>
